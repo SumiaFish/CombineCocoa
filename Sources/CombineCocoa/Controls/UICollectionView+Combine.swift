@@ -78,8 +78,8 @@ public extension UICollectionView {
             .eraseToAnyPublisher()
     }
 
-    override var delegateProxy: DelegateProxy {
-        CollectionViewDelegateProxy.createDelegateProxy(for: self)
+    private var delegateProxy: CollectionViewDelegateProxy {
+        .createDelegateProxy(for: self)
     }
 }
 

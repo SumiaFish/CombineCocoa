@@ -132,8 +132,8 @@ public extension UIScrollView {
             .eraseToAnyPublisher()
     }
 
-    @objc var delegateProxy: DelegateProxy {
-        ScrollViewDelegateProxy.createDelegateProxy(for: self)
+    private var delegateProxy: ScrollViewDelegateProxy {
+        .createDelegateProxy(for: self)
     }
 }
 
